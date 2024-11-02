@@ -148,3 +148,44 @@ footer a:hover {
     margin-top: 1rem; 
 }
 
+.qa-section {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #f9f9ff; /* Light background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.qa-section h2 {
+    font-size: 1.8rem;
+    color: #4a90e2;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.question {
+    margin-bottom: 1.5rem;
+}
+
+.question h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.question p, .question ul {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.question ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.question li {
+    margin-top: 0.5rem;
+}
+
+
