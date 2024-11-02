@@ -22,118 +22,231 @@
 
             <div class="slide">
                 <img src="images/1.png" alt="Neo4j Page 1 Image">
-                <p>Welcome to the Neo4j presentation. Here we explore the power and applications of Neo4j in graph databases.</p>
+                <p>Hello everyone, welcome to our presentation! Today, we will explore a technology that plays a significant role in modern data management: graph databases, with Neo4j as a leading example.</p>
             </div>
             
             <div class="slide">
-                <img src="2.png" alt="Neo4j Page 2 Image">
-                <p>Explanation for Page 2 content...</p>
+                <img src="images/2.png" alt="Neo4j Page 2 Image">
+                <p>Here are our team members.</p>
             </div>
 
             <div class="slide">
-                <img src="3.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/3.png" alt="Neo4j Page 3 Image">
+                <p>Look at the content, we will look at Neo4j's key features, its application cases, and its powerful capabilities in data management and analysis. By understanding how Neo4j operates and its technical advantages, we believe you'll gain a clearer understanding of how it transforms traditional data processing methods and enables businesses to unlock greater value.</p>
             </div>
 
             <div class="slide">
-                <img src="4.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/4.png" alt="Neo4j Page 4 Image">
+                <p>Please refer to the handouts. We've provided links to the official Neo4j documentation, which is ideal for beginners and helps you get it quicker .</p>
             </div>
 
             <div class="slide">
-                <img src="5.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/5.png" alt="Neo4j Page 5 Image">
+                <p>First, What is Neo4j?</p>
+                <p>It was created in 2007 by Emil Eifrem and is written in Java. </p>
+                <p>Let's look at the overview.</p>
+                    Neo4j is a graph database management system designed for connected data. It uses a graph structure to store data, making it more efficient than traditional relational databases in processing complex relationships and queries.
             </div>
 
             <div class="slide">
-                <img src="6.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/6.png" alt="Neo4j Page 6 Image">
+                <p>It's structured around three basic elements: nodes, relationships, and properties.</p>
+                <p>Neo4j uses an intuitive query language called Cypher, employs ACID-compliant transaction management for durability and consistency, and is highly efficient for handling complex data structures, delivering outstanding performance.</p>
             </div>
 
             <div class="slide">
-                <img src="7.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/7.png" alt="Neo4j Page 7 Image">
+                <p>In the next part, we'll discuss the simple illustrations of Neo4j.</p>
             </div>
 
             <div class="slide">
-                <img src="/mnt/data/Neo4j_Page3_Image1.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/8.png" alt="Neo4j Page 8 Image">
+                <p>To start using Neo4j, first, open your terminal and navigate to the installation folder where Neo4j is located. This is typically done using the cd command followed by the path to the installation directory. Once you're in the correct folder, run the command neo4j start to launch the database. You should see messages indicating that the database is starting up successfully.</p>
+                <p>After that, open your web browser and go to http://localhost:7474. This will take you to the Neo4j Browser interface, where you can interact with your database. You'll log in using the default username and password, both set to neo4j. Upon your first login, you'll be prompted to change the password for security purposes. Once logged in, you can start creating nodes and relationships using Cypher queries, exploring the powerful features of this graph database.</p>
             </div>
 
             <div class="slide">
-                <img src="/mnt/data/Neo4j_Page3_Image1.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/9.png" alt="Neo4j Page 9 Image">
+                <p>The image shows a Neo4j query where three nodes are being created, each representing a student with properties for their name, age, and gender. The code looks like this:</p>
+                <p>In this query, we use the <strong>CREATE</strong> statement to instantiate three <strong>Student</strong> nodes in Neo4j. Each node has properties such as <em>name</em>, <em>age</em>, and <em>gender</em>.</p>
+                <ul>
+                    <li>
+                        <strong>First Node</strong>: Represents a student named <strong>Brandy</strong>, who is <strong>21 years old</strong> and identifies as <strong>female</strong>.
+                    </li>
+                    <li>
+                        <strong>Second Node</strong>: Represents <strong>Catherine</strong>, a <strong>19-year-old female</strong> student.
+                    </li>
+                    <li>
+                        <strong>Third Node</strong>: Represents <strong>David</strong>, who is also <strong>21 years old</strong> and identifies as <strong>male</strong>.
+                    </li>
+                </ul>
+                <p>Below is the Neo4j query used to create these nodes:</p>
+                <p>This structure allows us to efficiently store and retrieve information about students in a graph database, making it easy to analyze relationships and attributes within our dataset.</p>
+                <p>The output shows that the query ran successfully. Each <strong>CREATE</strong> statement added a node with the specified properties to the database.</p>
+                <p>The result shows that each node is labeled 'student' and includes the attributes: name, age, and gender.</p>
             </div>
 
             <div class="slide">
-                <img src="/mnt/data/Neo4j_Page3_Image1.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/10.png" alt="Neo4j Page 10 Image">
+                <p>Creating Relationships</p>
+                <p>In this query, the <strong>MATCH</strong> clause is used to find the existing nodes in the database that match the label "Student" based on their name properties. Once the nodes are identified, the <strong>CREATE</strong> clause establishes relationships between them.</p>
+                <p>The relationships created are labeled <strong>[:FRIENDS_WITH]</strong>, representing the friendships among the students. This allows for a clear representation of their social connections within the graph, facilitating queries that can explore their relationships and interactions more effectively. By modeling friendships in this way, you can analyze social dynamics and other patterns within the dataset.</p>
             </div>
 
             <div class="slide">
-                <img src="/mnt/data/Neo4j_Page3_Image1.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/11.png" alt="Neo4j Page 11 Image">
+                <p><p>This query retrieves the <strong>FRIENDS_WITH</strong> relationships between nodes labeled as "Student." It returns the names of each student along with the names of their friends.</p>
+                <p>The results are displayed in a clear format, allowing you to easily see the connections among the students.</p>
+                <p>By executing this query, you can effectively visualize the social network among the students, highlighting their friendships and providing insights into their relationships within the graph database. This can be particularly useful for analyzing social dynamics and understanding how individuals are connected.</p>
             </div>
 
             <div class="slide">
-                <img src="/mnt/data/Neo4j_Page3_Image1.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/12.png" alt="Neo4j Page 12 Image">
             </div>
 
             <div class="slide">
-                <img src="/mnt/data/Neo4j_Page3_Image1.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/13.png" alt="Neo4j Page 13 Image">
+                <p>Let's watch a video!</p>
             </div>
 
             <div class="slide">
-                <img src="/mnt/data/Neo4j_Page3_Image1.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/14.png" alt="Neo4j Page 14 Image">
+                <p>Part Three: How to Integrate Neoj4 Technology with Other Components</p>
             </div>
 
             <div class="slide">
-                <img src="/mnt/data/Neo4j_Page3_Image1.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/15.png" alt="Neo4j Page 15 Image">
+                <p>This section outlines methods for efficiently managing graph data using Neo4j and integrating it with modern tools to enhance system functionality and performance.</p>
+
+                <p>In the <strong> front end</strong>, using GraphQL with Neo4j and React provides flexible querying capabilities, allowing applications to respond efficiently to user needs and improve user experience. For example, users can input their names to dynamically view their social network, including friends and friends of friends. CSS can enhance the interface for a more visually pleasing experience.</p>
+
+                <p>In the <strong> back end</strong>, Neo4j works well with frameworks like Spring and Express, simplifying data extraction and improving development efficiency. Neo4j's Aura cloud service further eases deployment by managing infrastructure, enabling developers to focus on application logic.</p>
+
+                <p>For a complete solution, Docker containers can package and deploy Neo4j, the Express backend, and front-end pages, making the system both functional and maintainable.</p>
+
+                <p>Neo4j also integrates with machine learning tools, allowing data to be extracted for training models and predictions to be stored back in the database, enhancing recommendation accuracy.</p>
+
+                <p>Finally, Neo4j supports social networking applications by storing user relationships, posts, and comments, highlighting its strengths in managing complex relational data.</p>
             </div>
 
             <div class="slide">
-                <img src="/mnt/data/Neo4j_Page3_Image1.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/16.png" alt="Neo4j Page 16 Image">
+                <p>The integration of Spring Boot with Neo4j.</p>
+                <p>To begin, an entity class should be created using Spring Data Neo4j annotations to map nodes and relationships within the database, establishing a basic database model. Subsequently, relationship entity classes are created to represent associations between nodes. A Repository interface is then written to define methods for interacting with Neo4j, simplifying the execution of queries and database operations.</p>
             </div>
 
             <div class="slide">
-                <img src="/mnt/data/Neo4j_Page3_Image1.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/17.png" alt="Neo4j Page 17 Image">
+                <p>Finally, the Repository interface is injected into the service or controller layer to perform database operations, ensuring seamless integration with Neo4j.</p>
             </div>
 
             <div class="slide">
-                <img src="/mnt/data/Neo4j_Page3_Image1.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/18.png" alt="Neo4j Page 18 Image">
+                <p>The integration of Neo4j with the Express framework.</p>
+                <p>To begin, a Repository interface is created as a bridge to interact with the Neo4j database, utilizing the official JavaScript driver to simplify querying and data updates. Next, the Express framework is used to create an API that retrieves movie lists and pulls data from the Neo4j database through this API.</p>
+                <p>This setup enables the front end to easily request back-end data, dynamically displaying movie information and enhancing the user experience.</p>
+                <p>In summary, combining Neo4's JavaScript driver with Express allows for efficient API development, streamlining the development process and enhancing system performance and flexibility.</p>
             </div>
 
             <div class="slide">
-                <img src="/mnt/data/Neo4j_Page3_Image1.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/19.png" alt="Neo4j Page 19 Image">
+                <p>Ok, let's look at part four: Application Scenarios.</p>
             </div>
 
             <div class="slide">
-                <img src="/mnt/data/Neo4j_Page3_Image1.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/20.png" alt="Neo4j Page 20 Image">
+                <p>This slide presents the Application Scenarios of Neo4j. The four key sectors where this technology is applied are: Network and IT Operations, Government, Fraud Detection & Analytics, Telecommunications.</p>
+                <p>1. Network and IT Operations: </p>
+                <p>Graph databases excel in managing and analyzing complex IT infrastructures and networks, making them ideal for tasks such as network topology mapping, fault detection, and operational monitoring.</p>
+                <p>2. Government:</p>
+                <p>Government entities can use graph databases for managing relationships within public administration, ensuring efficient data handling, and improving decision-making processes.</p>
+                <p>3. Fraud Detection & Analytics:</p>
+                <p>In a financial trading system, each transaction can be represented by a relationship, with the trading parties as nodes. Neo4j can quickly analyze the trading relationships between nodes, helping to identify abnormal transaction patterns or potential fraudulent activities. By tracking transaction paths, it can effectively detect money laundering activities or fake transactions.</p>
+                <p>4. Telecommunications:</p>
+                <p>Telecommunications companies benefit from graph databases by optimizing network operations, managing customer relationships, and detecting network issues, ensuring seamless communication and connectivity.</p>
             </div>
 
             <div class="slide">
-                <img src="/mnt/data/Neo4j_Page3_Image1.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/21.png" alt="Neo4j Page 21 Image">
+                <p>Next, I'm going to talk about social network in detail.</p>
+                <p>How to analyze relationships between users, identify influencers, and discover potential social groups on social platforms? Firstly, I should start by creating a circle of friends.</p>
             </div>
 
             <div class="slide">
-                <img src="/mnt/data/Neo4j_Page3_Image1.png" alt="Neo4j Page 3 Image">
-                <p>Explanation for Page 3 content...</p>
+                <img src="images/22.png" alt="Neo4j Page 22 Image">
+                <p>Show <strong>feng's</strong> circle of friends. Indicates that the query starts from the node <strong>"Feng"</strong> and passes through all nodes of up to 6 layers of relationships. If you want to query a node with a different name, change "Feng" to the corresponding name. Neo4j is great for processing and analyzing relational data in social networks. Each user can act as a node, and the friendship between users can be represented by relationships. With graph traversal, Neo4j is able to quickly find a user's social circle and identify users with broad influence. </p>
+            </div>
+
+            <div class="slide">
+                <img src="images/23.png" alt="Neo4j Page 23 Image">
+                <p>There are a few concepts to introduce here. <strong><1> </strong>Degree relationship (direct relationship) and <strong><2> </strong> Relationship of the second degree. The statement on the left returns all nodes that are directly connected to Xun. The statement on the right shows Xun and those nodes connected through layers 1 to 2 and may show more complex connection patterns.</p>
+                <p>This section has been upgraded from the previous example, and of course, more upgrades can be made in the future. For instance, we could add more friend queries, like third or fourth-degree connections. It could also show how to recommend jobs through friend relationships.</p>
+            </div>
+
+            <div class="slide">
+                <img src="images/24.png" alt="Neo4j Page 24 Image">
+                <p>Now, let's discuss the pros and cons of Neo4j in real-world applications.</p>
+            </div>
+
+            <div class="slide">
+                <img src="images/25.png" alt="Neo4j Page 25 Image">
+                <p>Let's look at the advantages of Neo4j first.</p>
+                <p><strong>Efficient handling of complex relationships:</strong> Neo4j is ideal for analyzing network or graph data with intricate relationships.</p>
+                <p><strong>Intuitive query language (Cypher):</strong> Cypher simplifies and makes querying data more intuitive.</p>
+                <p><strong>ACID Transaction Support:</strong> Neo4j adheres to ACID principles, ensuring data reliability and consistency.</p>
+                <p><strong>Extensive Integration and Support:</strong> It offers extensive integration features for interoperability with other systems.</p>
+                <p><strong>Scalability:</strong> Neo4j can scale with data growth, making it suitable for large-scale applications.</p>
+                <P><strong>Flexibility:</strong> Neo4j adapts to various data structures and requirements.</P>
+                <p><strong>Real-time data analysis:</strong> It supports real-time data querying and analysis, which is useful for time-sensitive applications.</p>
+                <P><strong>Intuitive data visualization:</strong> Neo4j's visualization capabilities make data relationships clear and understandable.</P>
+
+            </div>
+
+            <div class="slide">
+                <img src="images/26.png" alt="Neo4j Page 26 Image">
+                <p>Here are some disadvantages.</p>
+                <p>Although Cypher is relatively simple, transitioning from traditional relational databases requires an adjustment period.</p>
+                <p>Neo4j demands higher hardware specs and can be complex to maintain.</p>
+                <p>Write-heavy operations may perform better on other databases.</p>
+                <p>The community edition lacks advanced features, limiting its use in complex projects.</p>
+                <p>For some use cases, especially for small projects and individual users, there can be cost pressures.</p>
+            </div>
+
+            <div class="slide">
+                <img src="images/27.png" alt="Neo4j Page 27 Image">
+                <p>Let's look at a quick comparison.</p>
+                <p>Queries to Dgraph took the same amount of time, as expected in the both cases.</p>
+                <p>Neo4j's performance benefits from query caching, but without caching enableda, Dgraph's performance is superior.</p>
+            </div>
+
+            <div class="slide">
+                <img src="images/28.png" alt="Neo4j Page 28 Image">
+                <p>To conclude, we've examined various aspects of the Neo4j graph database, from its technical overview to practical applications.</p>
+                <P>Neo4j, with its unique structure of nodes, relationships, and properties, enables efficient data association and querying, making it especially suitable for managing and analyzing complex relationships.</P>
+                <p>Development and Future</p>
+                <p>Neo4j shows the powerful potential of graph databases for managing complex relational data.</p>
+                <P>It is poised to continue leading innovation in this field, offering efficient data management and analysis solutions for a wider range of industries and applications.</P>
+            </div>
+
+            <div class="slide">
+                <img src="images/29.png" alt="Neo4j Page 29 Image">
+                <p>We have also provided some helpful guides and courses for further exploration.</p>
+            </div>
+
+            <div class="slide">
+                <img src="images/30.png" alt="Neo4j Page 30 Image">
+                <p>This is a video called Neo4j in 100 Seconds. There's also an online course available if you want to learn more about Neo4j. Both are great options.</p>
+            </div>
+
+            <div class="slide">
+                <img src="images/31.png" alt="Neo4j Page 31 Image">
+                <p>Thank you for listening, and we hope this presentation has clarified how Neo4j is redefining data analysis. Are there any questions?</p>
             </div>
 
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Neo4j Group F | <a href="https://github.com/QiChen212221012/Neo4j" target="_blank">GitHub Repository</a></p>
+        <p>&copy; 2024 Neo4j Group F | <a href="https://github.com/QiChen212221012/Neo4j" target="_blank" aria-label="GitHub Repository">GitHub</a></p>
     </footer>
 </body>
 </html>
