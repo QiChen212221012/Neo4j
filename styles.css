@@ -188,4 +188,19 @@ footer a:hover {
     margin-top: 0.5rem;
 }
 
+.intro-message {
+    background-color: #f0f8ff;
+    border-left: 5px solid #007acc;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.intro-message p {
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+
 
