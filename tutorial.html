@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+    }
+    pre {
+        background-color: #2d2d2d;
+        color: #f8f8f2;
+        padding: 20px;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .keyword { color: #66d9ef; }
+    .class { color: #a6e22e; }
+    .string { color: #e6db74; }
+    .comment { color: #75715e; }
+    .function { color: #a6e22e; }
+    .variable { color: #f8f8f2; }
+    .tag { color: #f92672; }
+    .attribute { color: #66d9ef; }
+</style>
+
+<body>
+    <header>
+        <h1>Neo4j Tutorial</h1>
+        <nav>
+            <a href="index.html">Neo4j</a>
+            <a href="members.html">Members</a>
+            <a href="contents.html">Contents</a>
+            <a href="https://github.com/QiChen212221012/Neo4j-GroupF" target="_blank">GitHub</a>
+        </nav>
+    </header>
+    <main>
+        <section class="tutorial-section">
+            <h2>Neo4j Tutorial</h2>
+            <section class="intro-message">
+            <p>Neo4j is a powerful graph database designed to handle complex, connected data.</p>
+            <p>This tutorial will guide you through installing Neo4j, understanding its core concepts, and developing a simple application using the Cypher query language.</p>
+            <p>You can <strong style="color: #007bff;">click on the blue text</strong> to jump to the corresponding page for detailed learning.</p>
+            </section>
+            
+            <h3>1. Installing Neo4j</h3>
+            </a>
+
+            <p>To begin, download and install Neo4j Desktop, which provides a user-friendly interface for managing your databases.</p>
+            <ul>
+                <li><strong>Download Neo4j Desktop:</strong> Visit the <strong><a href="https://neo4j.com/download/" target="_blank">Neo4j Download Page</a></strong> and select the version compatible with your operating system.</li>
+                <div class="slide">
+                    <img src="images/38.png" alt="Neo4j Page 38 Image">
+                </div>
+
+                <li><strong>Install Neo4j Desktop:</strong> After downloading, run the installer and follow the on-screen instructions. Once installed, launch Neo4j Desktop.</li>
+                <li><strong>Create a Database:</strong> Within Neo4j Desktop, click the "New" button to create a new database instance. Set a name and password for your database, then start it.</li>
+            </ul>
+            <p>For detailed installation instructions, refer to the <strong><a href="https://neo4j.com/docs/operations-manual/current/installation/" target="_blank">Neo4j Operations Manual</a></strong>.</p>
+            <div class="slide">
+                <img src="images/39.png" alt="Neo4j Page 39 Image">
+            </div>
+
+            <h3>Take Windows as an example:</h3>
+            <p>Neo4j is built on Java, requiring the Java Virtual Machine (JVM) to run. Therefore, installing the <strong><a href="https://www.oracle.com/java/technologies/downloads/" target="_blank">Java SE JDK</a></strong> is essential.</p>
+            <p>Note: The latest version of Neo4j requires a JDK version of at least 17. Make sure your JDK version is compliant.</p>
+            <p><strong>a. Extract the Files:</strong> Unzip the downloaded ZIP file to your desired installation directory.</p>
+            <p><strong>b. Set Environment Variables (optional):</strong> Add the Neo4j <code>bin</code> directory to your system's PATH environment variable.</p>
+            <p><strong>c. Start Neo4j:</strong></p>
+            <ul>
+                <li>In the extracted directory, run <code>bin\neo4j.bat</code> to start Neo4j.</li>
+                <li>Access the browser at <a href="http://localhost:7474" target="_blank">http://localhost:7474</a>.</li>
+                <div class="slide">
+                    <img src="images/40.png" alt="Neo4j Page 40 Image">
+                </div>
+                <li>The default username is <code>neo4j</code>, and the password is <code>neo4j</code> (you will be prompted to change the password on first login).</li>
+            </ul>
+
+            <h3>2. Understanding Core Concepts</h3>
+            <p>Before diving into development, familiarize yourself with the following key concepts:</p>
+            <ul>
+                <li><strong>Nodes:</strong> Entities in the graph, such as people, places, or objects.</li>
+                <li><strong>Relationships:</strong> Connections between nodes that define how they are related.</li>
+                <li><strong>Properties:</strong> Key-value pairs associated with nodes or relationships, storing relevant information.</li>
+                <li><strong>Labels:</strong> Categories assigned to nodes to organize and facilitate querying.</li>
+            </ul>
+
+            <h3>3. Introduction to Cypher Query Language</h3>
+            <p>Cypher is Neo4j's declarative query language, designed specifically for graph data. Here are examples based on creating nodes, establishing relationships, and querying data:</p>
+            <pre><code>CREATE (a:Student {name: 'Brandy', age: 21, gender: 'female'});</code></pre>
+            <pre><code>CREATE (b:Student {name: 'Catherine', age: 19, gender: 'female'});</code></pre>
+            <pre><code>CREATE (c:Student {name: 'David', age: 21, gender: 'male'});</code></pre>
+            <div class="slide">
+                <img src="images/9.png" alt="Neo4j Page 9 Image">
+            </div>
+            <p><strong>Establishing Relationships:</strong>
+            <p>To create a "FRIENDS_WITH" relationship between these students:</p>
+            <pre><code>MATCH (a:Student {name: 'Brandy'}), (b:Student {name: 'Catherine'}) CREATE (a)-[:FRIENDS_WITH]->(b);</code></pre>
+            <pre><code>MATCH (a:Student {name: 'Brandy'}), (c:Student {name: 'David'}) CREATE (a)-[:FRIENDS_WITH]->(c);</code></pre>
+            <pre><code>MATCH (b:Student {name: 'Catherine'}), (c:Student {name: 'David'}) CREATE (b)-[:FRIENDS_WITH]->(c);</code></pre>
+            <div class="slide">
+                <img src="images/41.png" alt="Neo4j Page 41 Image">
+            </div>
+            <p><strong>Query data:</strong>
+            <p>To retrieve all students and their friends, use the following command:</p>
+            <pre><code>MATCH (s:Student)-[:FRIENDS_WITH]->(friend)</code></pre>
+            <pre><code>RETURN s.name AS Student, friend.name AS Friend;</code></pre>
+            <div class="slide">
+                <img src="images/42.png" alt="Neo4j Page 42 Image">
+            </div>
+            
+            <h3>4. Developing a Simple Application</h3>
+            <p>Building on the previous example, we upgraded it by creating a friend circle network, connecting friend nodes through <strong>KNOWS</strong> relationships.
+            <p>We used different queries to display first-degree, second-degree, and multi-degree connections, thereby constructing and visualizing a broader social network.</p>
+            <div class="slide">
+                <img src="images/43.png" alt="Neo4j Page 43 Image">
+            </div>
+            <div class="slide">
+                <img src="images/44.png" alt="Neo4j Page 44 Image">
+            </div>
+            <div class="slide">
+                <img src="images/45.png" alt="Neo4j Page 45 Image">
+                <p>Two separate queries are demonstrated. The first retrieves only direct friends of <strong>"Xun"</strong> (first-degree connections), while the second retrieves both first- and second-degree connections, providing a more extensive view of <strong>"Xun's"</strong> social network. </p>
+            </div>
+            <p>In the future, more upgrades could be implemented. For instance, we could add more friend queries, such as third- or fourth-degree connections. Additionally, it could showcase how friend relationships could be leveraged to recommend jobs, leading to a job recommendation system.</p>
+
+            <p>Now, let's develop a Java application to interact with Neo4j programmatically.</p>
+            <h3>Set Up Your Development Environment</h3>
+            <ul>
+            <li>1. Ensure the Java Development Kit (JDK) is installed on your system.</li>
+            <li>2. Create a new Java project using Maven or Gradle.</li>
+            </ul>
+            <h3>Add Neo4j Driver Dependency</h3>
+            <p>Include the Neo4j Java Driver in your project. For Maven, add this to your <code>pom.xml</code>:</p>
+            <pre>
+                &lt;<span class="tag">dependency</span>&gt;
+                    &lt;<span class="tag">groupId</span>&gt;<span class="string">org.neo4j.driver</span>&lt;/<span class="tag">groupId</span>&gt;
+                    &lt;<span class="tag">artifactId</span>&gt;<span class="string">neo4j-java-driver</span>&lt;/<span class="tag">artifactId</span>&gt;
+                    &lt;<span class="tag">version</span>&gt;<span class="string">5.0.0</span>&lt;/<span class="tag">version</span>&gt;
+                &lt;/<span class="tag">dependency</span>&gt;
+            </pre>
+
+            <P>
+            <h3>Code Example to Connect to Neo4j</h3>
+            <P>
+                <pre>
+                    <span class="keyword">import</span> <span class="class">org.neo4j.driver.AuthTokens</span>;
+                    <span class="keyword">import</span> <span class="class">org.neo4j.driver.Driver</span>;
+                    <span class="keyword">import</span> <span class="class">org.neo4j.driver.GraphDatabase</span>;
+                    <span class="keyword">import</span> <span class="class">org.neo4j.driver.Session</span>;
+            
+                    <span class="keyword">public class</span> <span class="class">Neo4jExample</span> {
+                        <span class="keyword">public static void</span> <span class="function">main</span>(<span class="class">String</span>[] args) {
+                            <span class="comment">// Connect to the database</span>
+                            <span class="class">Driver</span> driver = <span class="class">GraphDatabase</span>.driver(<span class="string">"bolt://localhost:7687"</span>, <span class="class">AuthTokens</span>.basic(<span class="string">"neo4j"</span>, <span class="string">"your_password"</span>));
+            
+                            <span class="comment">// Open a session</span>
+                            <span class="keyword">try</span> (<span class="class">Session</span> session = driver.session()) {
+                                <span class="comment">// Create student nodes and relationships</span>
+                                session.run(<span class="string">"CREATE (a:Student {name: 'Brandy', age: 21, gender: 'female'})"</span>);
+                                session.run(<span class="string">"CREATE (b:Student {name: 'Catherine', age: 22, gender: 'female'})"</span>);
+                                session.run(<span class="string">"CREATE (c:Student {name: 'David', age: 23, gender: 'male'})"</span>);
+            
+                                <span class="comment">// Create FRIENDS_WITH relationships</span>
+                                session.run(<span class="string">"MATCH (a:Student {name: 'Brandy'}), (b:Student {name: 'Catherine'}) CREATE (a)-[:FRIENDS_WITH]->(b)"</span>);
+                                session.run(<span class="string">"MATCH (a:Student {name: 'Brandy'}), (c:Student {name: 'David'}) CREATE (a)-[:FRIENDS_WITH]->(c)"</span>);
+                                session.run(<span class="string">"MATCH (b:Student {name: 'Catherine'}), (c:Student {name: 'David'}) CREATE (b)-[:FRIENDS_WITH]->(c)"</span>);
+            
+                                <span class="comment">// Query for student relationships</span>
+                                session.run(<span class="string">"MATCH (s:Student)-[:FRIENDS_WITH]->(friend) RETURN s.name, friend.name"</span>)
+                                      .list()
+                                      .forEach(record -> {
+                                          <span class="class">System.out</span>.println(record.get(<span class="string">"s.name"</span>).asString() + <span class="string">" is friends with "</span> + record.get(<span class="string">"friend.name"</span>).asString());
+                                      });
+                            }
+            
+                            <span class="comment">// Close the driver</span>
+                            driver.close();
+                        }
+                    }
+                </pre>
+            <p>Replace "your_password" with your actual database password. We use neo4j.</p>
+
+            <p><strong>Run the Application:</strong>
+            <p>Compile and execute the code. The output will display information about the students and their relationships.</p>
+            <div class="slide">
+                <img src="images/46.png" alt="Neo4j Page 46 Image">
+            </div>
+
+            <h3>5. Further Learning Resources</h3>
+            <p>To deepen your understanding of Neo4j, consider the following:</p>
+                <li><strong><a href="https://www.youtube.com/playlist?list=PL6UwySlcwEYJ9BKIiCk2bMfd_JKXwDPQJ" target="_blank">Video Tutorials:</a></strong> Watch the Neo4j Tutorial Playlist for step-by-step instructions.</li>
+                <div class="slide">
+                    <img src="images/47.png" alt="Neo4j Page 47 Image">
+                </div>
+            <p>This playlist is designed for individuals with a basic understanding of databases and data modeling, as well as familiarity with programming languages such as Java, Python, or JavaScript.
+            <p>It serves as a valuable resource for those looking to deepen their knowledge of graph databases and Neo4j's capabilities.</p>
+            <p class="highlight">By following these steps, you'll be able to effectively use Neo4j for managing and querying graph data.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Neo4j Group F | <a href="https://github.com/QiChen212221012/Neo4j" target="_blank" aria-label="GitHub Repository">GitHub</a></p>
+    </footer>
+</body>
+</html>
